@@ -1,9 +1,23 @@
-<section class="booking-detail">
-  @if (!booking()) {
-    <p class="state-msg">Seleccioná una clase para ver el detalle.</p>
-  } @else {
+<!-- Toast popup -->
+@if (toastVisible()) {
+  <div class="toast" [class.show]="toastVisible()" [class.toast-success]="reserved()" [class.toast-error]="reserveError()">
+    <span>{{ reserved() ? '¡Reserva confirmada para ' + booking()!.className + '!' : 'Sin cupos — clase llena.' }}</span>
+  </div>
+}
+
+<div class="backdrop" [class.open]="booking()" (click)="close()"></div>
+
+<section class="booking-detail" [class.open]="booking()">
+  <button class="btn-close" (click)="close()">✕</button>
+
+  @if (booking()) {
+    <img class="detail-image"
+         [src]="booking()!.imageUrl || 'assets/default-gym.jpg'"
+         [alt]="booking()!.className">
+
     <div class="detail-card">
       <h2>{{ booking()!.className }}</h2>
+
       <div class="detail-row">
         <span class="label">Profesor</span>
         <span>{{ booking()!.instructor }}</span>
@@ -17,13 +31,11 @@
         <span>{{ booking()!.availableSpots }} disponibles</span>
       </div>
 
-      @if (reserved()) {
-        <p class="success-msg">✅ ¡Reserva confirmada!</p>
-      } @else {
-        <button class="btn-reservar" (click)="reserve()" [disabled]="booking()!.availableSpots === 0">
-          Reservar
-        </button>
-      }
+      <button class="btn-reservar"
+              (click)="reserve()"
+              [disabled]="booking()!.availableSpots === 0 || reserved()">
+        {{ reserved() ? 'Reservado ✓' : booking()!.availableSpots === 0 ? 'Clase llena' : 'Reservar' }}
+      </button>
     </div>
   }
 </section>

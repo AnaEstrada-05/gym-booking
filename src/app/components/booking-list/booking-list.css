@@ -104,3 +104,7 @@
     font-size: 1.2rem;
     color: #636e72;
 }
+.message.error {
+    color: #dc2626;
+    font-weight: 600;
+}
