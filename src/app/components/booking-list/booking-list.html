@@ -1,0 +1,36 @@
+<section class="booking-list">
+  @if (loading()) {
+    <div class="status-container">
+      <p class="message">Cargando clases...</p>
+    </div>
+  } @else if (error()) {
+    <div class="status-container">
+      <p class="message error">Error al cargar las clases. Intentá de nuevo.</p>
+    </div>
+  } @else if (bookings().length === 0) {
+    <div class="status-container">
+      <p class="message">No hay clases disponibles.</p>
+    </div>
+  } @else {
+    <div class="grid-container">
+      @for (booking of bookings(); track booking.id) {
+        <div class="booking-card" (click)="selectBooking(booking)">
+          <div class="card-image">
+            <img [src]="booking.imageUrl || 'assets/default-gym.jpg'" [alt]="booking.className">
+            <div class="badge" [class.full]="booking.availableSpots === 0">
+              {{ booking.availableSpots === 0 ? 'Lleno' : booking.availableSpots + ' Libres' }}
+            </div>
+          </div>
+          
+          <div class="card-info">
+            <h3>{{ booking.className }}</h3>
+            <div class="schedule">
+              <i class="icon-clock"></i> {{ booking.schedule }}
+            </div>
+            <button class="btn-ver">Ver Detalles</button>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</section>
