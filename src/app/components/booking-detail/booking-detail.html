@@ -1,0 +1,29 @@
+<section class="booking-detail">
+  @if (!booking()) {
+    <p class="state-msg">Seleccioná una clase para ver el detalle.</p>
+  } @else {
+    <div class="detail-card">
+      <h2>{{ booking()!.className }}</h2>
+      <div class="detail-row">
+        <span class="label">Profesor</span>
+        <span>{{ booking()!.instructor }}</span>
+      </div>
+      <div class="detail-row">
+        <span class="label">Horario</span>
+        <span>{{ booking()!.schedule }}</span>
+      </div>
+      <div class="detail-row">
+        <span class="label">Cupos</span>
+        <span>{{ booking()!.availableSpots }} disponibles</span>
+      </div>
+
+      @if (reserved()) {
+        <p class="success-msg">✅ ¡Reserva confirmada!</p>
+      } @else {
+        <button class="btn-reservar" (click)="reserve()" [disabled]="booking()!.availableSpots === 0">
+          Reservar
+        </button>
+      }
+    </div>
+  }
+</section>
