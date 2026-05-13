@@ -2,8 +2,6 @@
 
 **Gym Fitness** es una aplicación web moderna para reservar clases en el gimnasio. Desarrollada con **Angular 21**, permite a los usuarios visualizar clases disponibles, ver detalles y gestionar sus reservas de forma intuitiva.
 
-![Vista de la aplicación](public/assets/gym.jpg)
-
 ## Características
 
 - **Interfaz moderna y responsive**
