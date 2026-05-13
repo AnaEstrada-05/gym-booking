@@ -1,9 +1,8 @@
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
     gap: 30px;
-    padding: 20px 0;
-    justify-items: center;
+    width: 100%;
 }
 
 .booking-card {
@@ -15,7 +14,6 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    width: 30vw;
 }
 
 .booking-card:hover {

@@ -67,9 +67,3 @@
     transform: translateY(-3px);
     background-color: #008fca;
 }
-
-.app-layout {
-    padding: 80px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
