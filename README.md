@@ -1,10 +1,9 @@
-# 🏋️ GymBooking - Reserva de Clases
+# GymBooking - Reserva de Clases
 
 **Gym Fitness** es una aplicación web moderna para reservar clases en el gimnasio. Desarrollada con **Angular 21**, permite a los usuarios visualizar clases disponibles, ver detalles y gestionar sus reservas de forma intuitiva.
 
-![Vista de la aplicación](public/assets/gym.jpg)
 
-## ✨ Características
+## Características
 
 - **Interfaz moderna y responsive**
 - **Visualización de clases** (CrossFit, Yoga, Pilates, Spinning, Funcional, etc.)
@@ -13,7 +12,7 @@
 - **Diseño limpio** con imágenes atractivas
 - **Simulación de API** mediante interceptor (ideal para desarrollo)
 
-## 🛠 Tecnologías
+## Tecnologías
 
 - **Angular 21**
 - **TypeScript**
@@ -21,7 +20,7 @@
 - **Prettier** + **EditorConfig**
 - **RxJS**
 
-## 🚀 Instalación y Ejecución
+## Instalación y Ejecución
 
 ### 1. Clonar el repositorio
 
@@ -41,22 +40,6 @@ npm install
 ```bash
 npm start
 ```
-
-
-## Estructura del Proyecto
-
-gym-booking/
-├── src/
-│   ├── app/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── models/
-│   │   ├── services/
-│   │   └── interceptors/
-│   ├── assets/
-│   └── environments/
-├── public/
-└── package.json
 
 ## Autor
 Ana Estrada
