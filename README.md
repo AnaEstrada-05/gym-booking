@@ -40,21 +40,5 @@ npm install
 npm start
 ```
 
-
-## Estructura del Proyecto
-
-gym-booking/
-├── src/
-│   ├── app/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── models/
-│   │   ├── services/
-│   │   └── interceptors/
-│   ├── assets/
-│   └── environments/
-├── public/
-└── package.json
-
 ## Autor
 Ana Estrada
