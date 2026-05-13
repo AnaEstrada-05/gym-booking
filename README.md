@@ -1,59 +1,62 @@
-# GymBooking
+# 🏋️ GymBooking - Reserva de Clases
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.11.
+**Gym Fitness** es una aplicación web moderna para reservar clases en el gimnasio. Desarrollada con **Angular 21**, permite a los usuarios visualizar clases disponibles, ver detalles y gestionar sus reservas de forma intuitiva.
 
-## Development server
+![Vista de la aplicación](public/assets/gym.jpg)
 
-To start a local development server, run:
+## ✨ Características
 
-```bash
-ng serve
-```
+- **Interfaz moderna y responsive**
+- **Visualización de clases** (CrossFit, Yoga, Pilates, Spinning, Funcional, etc.)
+- **Reserva de plazas** en tiempo real
+- **Detalles de cada clase** (instructor, horario y cupos disponibles)
+- **Diseño limpio** con imágenes atractivas
+- **Simulación de API** mediante interceptor (ideal para desarrollo)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🛠 Tecnologías
 
-## Code scaffolding
+- **Angular 21**
+- **TypeScript**
+- **Vitest** (para pruebas)
+- **Prettier** + **EditorConfig**
+- **RxJS**
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🚀 Instalación y Ejecución
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+### 1. Clonar el repositorio
 
 ```bash
-ng build
+git clone <URL_DEL_REPOSITORIO>
+cd gym-booking
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+### 2. Instalar dependencias
 
 ```bash
-ng test
+npm install
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### 3. Ejecutar en modo desarrollo
 
 ```bash
-ng e2e
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
+## Estructura del Proyecto
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+gym-booking/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── models/
+│   │   ├── services/
+│   │   └── interceptors/
+│   ├── assets/
+│   └── environments/
+├── public/
+└── package.json
+
+## Autor
+Ana Estrada
