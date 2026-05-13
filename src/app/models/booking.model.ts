@@ -4,4 +4,5 @@ export interface Booking {
   instructor: string;
   schedule: string;
   availableSpots: number;
+  imageUrl?: string; 
 }
